@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-from Functions.borderFunc import extract_table
+from CascadeTabNet.TableStructureRecognition.Functions.borderFunc import extract_table
 from lxml import etree
 ## Input : roi of one cell
 ## Output : bounding box for the text in that cell
@@ -322,8 +322,8 @@ def borderless(table, image, res_cells):
         cv2.rectangle(im2, (tbox[0], tbox[1]), (tbox[2], tbox[3]), colors[no%len(colors)], 1)
         # print(tbox)
 
-    cv2.imshow("text chunks", im2)
-    cv2.waitKey(0)
+#     cv2.imshow("text chunks", im2)
+#     cv2.waitKey(0)
 
     def rowstart(val):
       r = 0
